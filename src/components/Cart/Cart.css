@@ -1,0 +1,8 @@
+.cart-box {
+    border: 1px solid darkgray;
+    background-color: rgb(248, 190, 45);
+    /* border-radius: 10px; */
+    margin: 15px;
+    padding: 10px;
+    width: 350px;
+}
