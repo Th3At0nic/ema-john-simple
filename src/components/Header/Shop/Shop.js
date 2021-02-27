@@ -12,7 +12,7 @@ const Shop = () => {
     console.log(product);
   };
 
-  const first10 = fakeData.slice(0, 15);
+  const first10 = fakeData.slice(0, 50);
   console.log(first10);
   const [products, setProducts] = useState(first10);
 
