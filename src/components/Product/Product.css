@@ -14,3 +14,14 @@
     color: blue;
     font-weight: 400;
 }
+
+.cart-button {
+    height: 40px;
+    width: 180px;
+    background-color: rgb(248, 190, 45);
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 7px;
+}
