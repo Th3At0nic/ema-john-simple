@@ -3,6 +3,10 @@ import fakeData from "../../../fakeData";
 import Product from "../../Product/Product";
 import "./Shop.css";
 const Shop = () => {
+  const handleAddProduct = (product) => {
+    console.log(product);
+  };
+
   const first10 = fakeData.slice(0, 15);
   console.log(first10);
   const [products, setProducts] = useState(first10);
@@ -10,7 +14,10 @@ const Shop = () => {
     <div className="shop-container">
       <div className="product-container">
         {products.map((product) => (
-          <Product product={product}></Product>
+          <Product
+            handleAddProduct={handleAddProduct}
+            product={product}
+          ></Product>
         ))}
       </div>
 
