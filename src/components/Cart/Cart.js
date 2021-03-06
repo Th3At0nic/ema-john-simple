@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = (props) => {
@@ -21,13 +22,22 @@ const Cart = (props) => {
   const tax = total / 10;
 
   return (
-    <div className="cart-box">
-      <h3>Order Summery</h3>
-      <h4> Items Ordered: {cart.length} </h4>
-      <h4>Product Price: {total.toFixed(2)}</h4>
-      <h4>Shipping Cost: {shipping.toFixed(2)}</h4>
-      <h4>Tax: {tax.toFixed(2)}</h4>
-      <h2>Total Price: ${(total + shipping + tax).toFixed(2)}</h2>
+    <div>
+      <div className="cart-box">
+        <h3>Order Summery</h3>
+        <h4> Items Ordered: {cart.length} </h4>
+        <h4>Product Price: {total.toFixed(2)}</h4>
+        <h4>Shipping Cost: {shipping.toFixed(2)}</h4>
+        <h4>Tax: {tax.toFixed(2)}</h4>
+        <h2>Total Price: ${(total + shipping + tax).toFixed(2)}</h2>
+      </div>
+      <br />
+      <br />
+      <div>
+        <Link to="/review">
+          <button className="review-order-btn">Review Order</button>
+        </Link>
+      </div>
     </div>
   );
 };
