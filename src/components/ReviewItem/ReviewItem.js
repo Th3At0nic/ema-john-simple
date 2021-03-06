@@ -2,7 +2,7 @@ import React from "react";
 
 const ReviewItem = (props) => {
   // console.log(props);
-  const { name, quantity, key } = props.product;
+  const { name, quantity, key, price } = props.product;
   const reviewItemStyle = {
     borderBottom: "1px solid gray",
     marginBottom: "5px",
@@ -12,6 +12,7 @@ const ReviewItem = (props) => {
   return (
     <div style={reviewItemStyle}>
       <h4 className="product-name">{name}</h4>
+      <small>${price}</small>
       <p>Quantity: {quantity}</p>
       <br />
       <br />
