@@ -6,6 +6,7 @@ import {
 import fakeData from "../../fakeData";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import Cart from "../Cart/Cart";
+import { Link } from "react-router-dom";
 
 const Review = () => {
   const [cart, setCart] = useState([]);
@@ -42,7 +43,11 @@ const Review = () => {
         ))}
       </div>
       <div>
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <Link to="/review">
+            <button className="review-order-btn">Place Order</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );

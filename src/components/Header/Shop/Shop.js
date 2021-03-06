@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import fakeData from "../../../fakeData";
-import { addToDatabaseCart, getDatabaseCart } from "../../../utilities/databaseManager";
+import {
+  addToDatabaseCart,
+  getDatabaseCart,
+} from "../../../utilities/databaseManager";
 import Cart from "../../Cart/Cart";
 import Product from "../../Product/Product";
 import "./Shop.css";
@@ -59,7 +63,11 @@ const Shop = () => {
       </div>
 
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <Link to="/review">
+            <button className="review-order-btn">Review Order</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
