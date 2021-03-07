@@ -31,8 +31,7 @@ const Shop = () => {
     const sameProduct = cart.find((pd) => pd.key === keyToBeAdded);
 
     if (sameProduct) {
-      count = count + 1;
-      // count = sameProduct.quantity + 1; //this line is same as line nmbr 17
+      count = sameProduct.quantity + 1;
       sameProduct.quantity = count;
       const others = cart.filter((pd) => pd.key !== keyToBeAdded);
       newCart = [...others, sameProduct];

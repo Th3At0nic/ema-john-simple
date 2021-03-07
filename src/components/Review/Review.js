@@ -12,7 +12,7 @@ import PlaceOrderImage from "../../images/giphy.gif";
 
 const Review = () => {
   const [cart, setCart] = useState([]);
-  const [placedOrder, setPlacedOrder] = useState([false]);
+  const [placedOrder, setPlacedOrder] = useState(false);
 
   const handlePlaceOrder = () => {
     setCart([]);
@@ -28,11 +28,11 @@ const Review = () => {
 
   useEffect(() => {
     const savedCart = getDatabaseCart();
-    // console.log(savedCart);
+    console.log(savedCart);
     const productKeys = Object.keys(savedCart);
     const cartProducts = productKeys.map((key) => {
       const product = fakeData.find((pd) => pd.key === key);
-      product.quantity = savedCart[key];
+      product.quantity = savedCart.key;
       return product;
     });
     setCart(cartProducts);
