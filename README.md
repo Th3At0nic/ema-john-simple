@@ -1,4 +1,5 @@
 # Live Site: https://frosty-knuth-6ba54d.netlify.app/
+# firebase.config.js file deleted . so some features might not work properly.
 
 # Getting Started with Create React App
 
