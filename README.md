@@ -1,5 +1,9 @@
 # Live Site: https://frosty-knuth-6ba54d.netlify.app/
+<<<<<<< HEAD
 # firebase.config.js file is not uploaded. so some features might not work properly.
+=======
+# firebase.config.js file deleted . so some features might not work properly.
+>>>>>>> c89ef50eac39b253b772a3c894c205f0eed34dfe
 
 # Getting Started with Create React App
 
