@@ -35,7 +35,7 @@ export const handleFbSignIn = (event) => {
     .signInWithPopup(fbProvider)
     .then((result) => {
       /** @type {firebase.auth.OAuthCredential} */
-      var credential = result.credential;
+      // var credential = result.credential;
       var user = result.user;
       user.success = true;
       return user;
@@ -45,9 +45,9 @@ export const handleFbSignIn = (event) => {
       var errorMessage = error.message;
       var email = error.email;
       var credential = error.credential;
+      console.log(errorCode, errorMessage, email, credential);
     });
 };
-
 ////////////////////////////////// sign out
 export const handleSignOut = () => {
   return firebase

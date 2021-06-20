@@ -5,8 +5,8 @@ import { getDatabaseCart, processOrder } from "../../utilities/databaseManager";
 import "./Shipment.css";
 
 const Shipment = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const [loggedInUser, setLoggedInUser] = useContext(userContext);
+  const { register, handleSubmit, errors } = useForm();
+  const [loggedInUser] = useContext(userContext);
   const onSubmit = (data) => {
     const savedCart = getDatabaseCart();
     const orderDetails = {
