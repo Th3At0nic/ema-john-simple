@@ -1,4 +1,4 @@
 node_modules/
-firebase.config.js/
 
 
+src/configs/firebase.config.js
